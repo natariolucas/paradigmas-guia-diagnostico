@@ -38,6 +38,14 @@ public class MainClass {
 			printMatrix(Ejercicio03.resolver(auxM[i]));			
 		}
 		
+		System.out.println("\n-- Ejercicio 04");
+		auxM = getMatrix04();
+		for (int i = 0; i < auxM.length; i++) {
+			printMatrix(auxM[i]);
+			System.out.println("- Output: ");
+			printArray(Ejercicio04.resolver(auxM[i]));			
+		}
+		
 	}
 
 	public static void printMatrix(int[][] m) {		
@@ -52,6 +60,19 @@ public class MainClass {
 			System.out.println("");
 		}
 	}
+	
+	public static void printArray(int[] a) {		
+		for (int i = 0; i < a.length; i++) {
+			if (i != 0) {
+				System.out.print(",");
+			}
+			
+			System.out.print(a[i]);
+		}
+		
+		System.out.println("");
+	}
+	
 	
 	public static int[][][] getMatrix01() {
 		int[][][] m = 
@@ -96,6 +117,19 @@ public class MainClass {
 					{ 8, 2, -3, 4 },
 					{ 5, -6, -6, 20 },
 					{ 21, 1, -5, 0 }
+				}
+			};
+		
+		return m;
+	}
+	
+	public static int[][][] getMatrix04() {
+		int[][][] m = 
+			{
+				{ 
+					{ 1, 2, 3, 4 },
+					{ 5, -6, -6, 20 },
+					{ 1, 1, 10, 10 }
 				}
 			};
 		
