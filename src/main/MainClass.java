@@ -4,12 +4,25 @@ import unlam.paradigmas.diagnostico.*;
 
 public class MainClass {
 	public static void main(String[] args) {
+		int[][][] auxM;
 		
 		System.out.println("-- Ejercicio 01");
-		int[][][] m1 = getMatrix01();
-		for (int i = 0; i < m1.length; i++) {
-			printMatrix(m1[i]);
-			if (Ejercicio01.resolver(m1[i])) {
+		auxM = getMatrix01();
+		for (int i = 0; i < auxM.length; i++) {
+			printMatrix(auxM[i]);
+			if (Ejercicio01.resolver(auxM[i])) {
+				System.out.println("- Resuelto por caso de exito");
+			} else {
+				System.out.println("- Resuelto por caso fallido");
+			}
+			
+		}
+		
+		System.out.println("\n-- Ejercicio 02");
+		auxM = getMatrix02();
+		for (int i = 0; i < auxM.length; i++) {
+			printMatrix(auxM[i]);
+			if (Ejercicio02.resolver(auxM[i])) {
 				System.out.println("- Resuelto por caso de exito");
 			} else {
 				System.out.println("- Resuelto por caso fallido");
@@ -44,6 +57,24 @@ public class MainClass {
 					{ 1, 2, 3 },
 					{ 4, 3, 6 },
 					{ 7, 8, 2 }
+				}
+			};
+		
+		return m;
+	}
+	
+	public static int[][][] getMatrix02() {
+		int[][][] m = 
+			{
+				{ 
+					{ 1,1,1 },
+					{ 1,1,1 },
+					{ 9,8,7 }
+				},
+				{ 
+					{ 1,1,1 },
+					{ 1,1,0 },
+					{ 9,9,9}
 				}
 			};
 		
