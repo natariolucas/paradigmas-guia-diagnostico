@@ -30,6 +30,14 @@ public class MainClass {
 			
 		}
 		
+		System.out.println("\n-- Ejercicio 03");
+		auxM = getMatrix03();
+		for (int i = 0; i < auxM.length; i++) {
+			printMatrix(auxM[i]);
+			System.out.println("- Output: ");
+			printMatrix(Ejercicio03.resolver(auxM[i]));			
+		}
+		
 	}
 
 	public static void printMatrix(int[][] m) {		
@@ -75,6 +83,19 @@ public class MainClass {
 					{ 1,1,1 },
 					{ 1,1,0 },
 					{ 9,9,9}
+				}
+			};
+		
+		return m;
+	}
+	
+	public static int[][][] getMatrix03() {
+		int[][][] m = 
+			{
+				{ 
+					{ 8, 2, -3, 4 },
+					{ 5, -6, -6, 20 },
+					{ 21, 1, -5, 0 }
 				}
 			};
 		
